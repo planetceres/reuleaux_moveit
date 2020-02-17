@@ -7,7 +7,7 @@
 #include <eigen_conversions/eigen_msg.h>
 #include<moveit_msgs/GetPositionIK.h>
 #include<moveit_msgs/PositionIKRequest.h>
-#include<moveit/move_group_interface/move_group.h>
+#include <moveit/move_group_interface/move_group_interface.h>
 
 namespace reuleaux
 {
@@ -36,7 +36,7 @@ private:
   bool createReachability(const map_generation::WorkSpace& ws);
 
 
-  boost::scoped_ptr<moveit::planning_interface::MoveGroup> group_;
+  boost::scoped_ptr<moveit::planning_interface::MoveGroupInterface> group_;
   std::string planning_frame_;
   moveit_msgs::GetPositionIK srv_;
 
